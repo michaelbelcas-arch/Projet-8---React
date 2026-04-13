@@ -1,12 +1,33 @@
 .footer {
   background-color: #000000;
-  color: #ffffff;
-  padding: 30px 20px;
   margin-top: auto;
 }
 
 .footer__container {
-  max-width: 1240px;
+  max-width: 1440px;
   margin: 0 auto;
-  text-align: center;
+}
+
+.footer__image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.footer__image--desktop {
+  display: none;
+}
+
+.footer__image--mobile {
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .footer__image--desktop {
+    display: block;
+  }
+
+  .footer__image--mobile {
+    display: none;
+  }
 }

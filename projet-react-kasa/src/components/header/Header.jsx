@@ -1,4 +1,5 @@
 import { NavLink } from 'react-router-dom'
+import logoRed from '../../assets/logo-red.png'
 import './header.css'
 
 function Header() {
@@ -6,8 +7,7 @@ function Header() {
     <header className="header">
       <div className="header__container">
         <NavLink to="/" className="header__logo">
-          {/* TODO: ajouter ici le logo Kasa */}
-          <span>Kasa</span>
+          <img src={logoRed} alt="Logo Kasa" className="header__logo-image" />
         </NavLink>
 
         <nav className="header__nav">
@@ -26,7 +26,7 @@ function Header() {
               isActive ? 'header__link header__link--active' : 'header__link'
             }
           >
-            A Propos
+            À propos
           </NavLink>
         </nav>
       </div>

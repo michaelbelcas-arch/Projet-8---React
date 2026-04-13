@@ -28,3 +28,9 @@
 .header__link--active {
   text-decoration: underline;
 }
+
+.header__logo-image {
+  width: 145px;
+  height: auto;
+  display: block;
+}
