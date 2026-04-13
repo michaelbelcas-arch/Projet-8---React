@@ -1,4 +1,45 @@
 .error-page {
-  padding: 40px 20px;
+  width: 100%;
+  padding: 80px 20px 120px;
   text-align: center;
+}
+
+.error-page h1 {
+  margin: 0;
+  color: #ff6060;
+  font-size: 96px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.error-page p {
+  margin: 113px 0 133px;
+  color: #ff6060;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.error-page a {
+  font-size: 14px;
+  text-decoration: underline;
+}
+
+@media (min-width: 768px) {
+  .error-page {
+    padding: 90px 20px 140px;
+  }
+
+  .error-page h1 {
+    font-size: 288px;
+  }
+
+  .error-page p {
+    margin: 139px 0 182px;
+    font-size: 36px;
+  }
+
+  .error-page a {
+    font-size: 18px;
+  }
 }

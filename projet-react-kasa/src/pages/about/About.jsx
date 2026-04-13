@@ -8,7 +8,11 @@ function About() {
   return (
     <main className="about">
       <div className="about__container">
-        <Banner image={aboutBanner} isTextVisible={false} />
+        <Banner 
+         image={aboutBanner}
+         isTextVisible={false}
+         variant="about" 
+        />
 
         <section className="about__collapses">
           {aboutData.map((item) => (

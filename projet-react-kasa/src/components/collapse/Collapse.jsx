@@ -1,27 +1,31 @@
 import { useState } from 'react'
+import arrowIcon from '../../assets/collapse-arrow.png'
 import './collapse.css'
 
 function Collapse({ title, content }) {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <div className="collapse">
+    <div className={`collapse ${isOpen ? 'collapse--open' : ''}`}>
       <button
         className="collapse__header"
         onClick={() => setIsOpen(!isOpen)}
         type="button"
       >
-        <span>{title}</span>
-        <span className={isOpen ? 'collapse__icon collapse__icon--open' : 'collapse__icon'}>
-          ˄
-        </span>
+        <span className="collapse__title">{title}</span>
+
+        <img
+          src={arrowIcon}
+          alt=""
+          className="collapse__icon"
+        />
       </button>
 
-      {isOpen && (
-        <div className="collapse__content">
+      <div className="collapse__body">
+        <div className="collapse__inner">
           <p>{content}</p>
         </div>
-      )}
+      </div>
     </div>
   )
 }

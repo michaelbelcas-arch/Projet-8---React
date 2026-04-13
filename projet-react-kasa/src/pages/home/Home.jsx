@@ -55,8 +55,9 @@ function Home() {
     <main className="home">
       <div className="home__container">
         <Banner
-          title="Chez vous, partout et ailleurs"
-          image={homeBanner}
+         title="Chez vous, partout et ailleurs"
+         image={homeBanner}
+         variant="home"
         />
 
         <section className="home__gallery">

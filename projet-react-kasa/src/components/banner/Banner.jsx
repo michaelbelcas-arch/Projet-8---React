@@ -1,12 +1,11 @@
 import './banner.css'
 
-function Banner({ title, image, isTextVisible = true }) {
+function Banner({ title, image, isTextVisible = true, variant = 'default' }) {
   return (
-    <section className="banner">
-      <div
-        className="banner__image"
-        style={image ? { backgroundImage: `url(${image})` } : {}}
-      >
+    <section className={`banner banner--${variant}`}>
+      <div className="banner__image">
+        {image && <img src={image} alt="" className="banner__img" />}
+
         <div className="banner__overlay"></div>
 
         {isTextVisible && <h1 className="banner__title">{title}</h1>}
