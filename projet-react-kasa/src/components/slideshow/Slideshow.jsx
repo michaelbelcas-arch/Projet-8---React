@@ -21,11 +21,19 @@ function Slideshow({ pictures, title }) {
   return (
     <section className="slideshow">
       <div className="slideshow__container">
-        <img
-          src={pictures[currentIndex]}
-          alt={`${title} - image ${currentIndex + 1}`}
-          className="slideshow__image"
-        />
+        <div
+          className="slideshow__track"
+          style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+        >
+          {pictures.map((picture, index) => (
+            <img
+              key={`${title}-${index}`}
+              src={picture}
+              alt={`${title} - image ${index + 1}`}
+              className="slideshow__image"
+            />
+          ))}
+        </div>
 
         {hasMultiplePictures && (
           <>
@@ -33,6 +41,7 @@ function Slideshow({ pictures, title }) {
               type="button"
               className="slideshow__arrow slideshow__arrow--left"
               onClick={goToPrevious}
+              aria-label="Image précédente"
             >
               ‹
             </button>
@@ -41,6 +50,7 @@ function Slideshow({ pictures, title }) {
               type="button"
               className="slideshow__arrow slideshow__arrow--right"
               onClick={goToNext}
+              aria-label="Image suivante"
             >
               ›
             </button>
