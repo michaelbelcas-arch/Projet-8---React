@@ -1,8 +1,15 @@
-import React from 'react'
 import './footer.css'
 
-export default function Footer() {
+function Footer() {
   return (
-    <div>Footer</div>
+    <footer className="footer">
+      <div className="footer__container">
+        {/* TODO: ajouter ici le logo blanc Kasa */}
+        <p>Kasa</p>
+        <p>© 2020 Kasa. All rights reserved</p>
+      </div>
+    </footer>
   )
 }
+
+export default Footer
